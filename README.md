@@ -9,7 +9,7 @@
 3.
   Склонируйте репозиторий:
   ```
-  git clone https://gitlab.manytask.org/lean/students-2026-fall/student_name
+  git clone https://gitlab-standby.manytask.org/lean/students-2026-fall/student_name
   ```
   Зайдите в него:
   ```

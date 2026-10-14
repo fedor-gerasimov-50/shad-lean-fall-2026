@@ -1,7 +1,7 @@
 variables:
   GIT_DEPTH: 10
   GIT_STRATEGY: clone
-  REGISTRY: gitlab.manytask.org:5050/lean/public-2026-fall
+  REGISTRY: registry.gitlab-standby.manytask.org/lean/public-2026-fall
   REF_DIR: /opt/shad
 
 # Testing and Grading all changed tasks

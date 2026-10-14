@@ -42,11 +42,8 @@ class RunPytestPlugin(RunScriptPlugin):
             with open(lean_file, "r", encoding="utf-8") as f:
                 for lineno, line in enumerate(f, 1):
                     if line.strip() == "import Mathlib":
-                        raise PluginExecutionFailed(
-                            f"""{lean_file}:{lineno}: heavy import `import Mathlib` is forbidden.
-                            Please use #min_imports command to minimize the imports.""",
-                            percentage=0.0
-                        )
+                        msg = f"{lean_file}:{lineno}: heavy import `import Mathlib` is forbidden. Please use #min_imports command to minimize the imports."
+                        raise PluginExecutionFailed(msg, output=msg, percentage=0.0)
 
         # If everything is OK return 100%
         result = PluginOutput(
